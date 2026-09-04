@@ -1,0 +1,33 @@
+{
+  "name": "MoviesForYou",
+  "short_name": "MoviesFY",
+  "description": "Discover trending movies, search titles, explore genres, and build your watchlist.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030712",
+  "theme_color": "#030712",
+  "orientation": "any",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["entertainment", "movies"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

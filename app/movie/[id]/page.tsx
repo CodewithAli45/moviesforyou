@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getMovieDetail, getImageUrl, getBackdropUrl } from "@/lib/tmdb";
+import TrailerModal from "@/components/TrailerModal";
 import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
@@ -168,19 +169,7 @@ export default async function MoviePage({ params }: PageProps) {
               </div>
             )}
 
-            {trailer && (
-              <a
-                href={`https://www.youtube.com/watch?v=${trailer.key}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-red-700 transition-colors mt-4"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z" />
-                </svg>
-                Watch Trailer
-              </a>
-            )}
+            {trailer && <TrailerModal videoKey={trailer.key} />}
           </div>
         </div>
       </div>
